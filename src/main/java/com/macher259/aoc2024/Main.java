@@ -5,8 +5,12 @@ import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 
 public class Main {
+    private static final int LAST_DAY = 2;
+
     public static void main(String[] args) throws IOException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, IllegalAccessException, InstantiationException {
-        exec(1);
+        for (int i = 1; i <= LAST_DAY; i++) {
+            exec(i);
+        }
     }
 
     private static void exec(int num) throws IOException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
