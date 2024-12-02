@@ -17,3 +17,5 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+gradle.startParameter.showStacktrace = ShowStacktrace.ALWAYS
