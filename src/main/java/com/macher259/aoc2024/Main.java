@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 
 public class Main {
-    private static final int LAST_DAY = 4;
+    private static final int LAST_DAY = 5;
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, IllegalAccessException, InstantiationException {
         for (int i = 1; i <= LAST_DAY; i++) {
