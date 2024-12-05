@@ -18,4 +18,10 @@ tasks.test {
     useJUnitPlatform()
 }
 
+tasks.withType<JavaCompile> {
+    options.compilerArgs.add("--enable-preview")
+}
+
+tasks.withType<JavaExec>().configureEach { jvmArgs("--enable-preview") }
+
 gradle.startParameter.showStacktrace = ShowStacktrace.ALWAYS
