@@ -3,26 +3,11 @@ package com.macher259.aoc2024;
 import java.util.*;
 import java.util.stream.Stream;
 
-enum Direction {
-    UP, RIGHT, DOWN, LEFT
-}
-
-record Pair(int row, int col) {
-    Pair on(Direction dir) {
-        return switch (dir) {
-            case UP -> new Pair(row - 1, col);
-            case RIGHT -> new Pair(row, col + 1);
-            case DOWN -> new Pair(row + 1, col);
-            case LEFT -> new Pair(row, col - 1);
-        };
-    }
-}
 
 public class Day6 {
     private final char[][] matrix;
     private final List<TreeSet<Integer>> rowObstacles;
     private final List<TreeSet<Integer>> colObstacles;
-
     private int startRow;
     private int startCol;
 
@@ -148,5 +133,20 @@ public class Day6 {
         }
 
         return String.valueOf(ans);
+    }
+
+    enum Direction {
+        UP, RIGHT, DOWN, LEFT
+    }
+
+    record Pair(int row, int col) {
+        Pair on(Direction dir) {
+            return switch (dir) {
+                case UP -> new Pair(row - 1, col);
+                case RIGHT -> new Pair(row, col + 1);
+                case DOWN -> new Pair(row + 1, col);
+                case LEFT -> new Pair(row, col - 1);
+            };
+        }
     }
 }
